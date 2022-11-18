@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!--Content goes here-->
+    
+    <!-- Navigation Section-->
+    
+    <nav>
+      <div class="logo">
+        <img src="/TECKWILD/crown_10.png" alt="">
+        <p>OneKingdom.com</p>
+      </div>
+        <ul>
+            <li><a href="/TECKWILD/index.html">About</a></li>
+            <li><a href="/TECKWILD/royal-family.html">Royal Family</a></li>
+            <li><a href="/TECKWILD/assets.html">Royal Assets</a></li>
+            <li><a href="/TECKWILD/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+<div class="popup" id="popup">
+  <h2>THANKS YOU!</h2>
+  <P>Your details has been successfully submited. thanks!</P>
+  <button class="close" type="button" onclick="closePopup()">ok</button>
+</div>
+    <h2>Fill in the form below to contact the Royal Kingdom</h2>
+    <div class="container">
+      <div class="blockform">
+          <form  class="form" id="form">
+            <div class="inputboxes">
+              <div class="blockbox">
+                <input type="text" id="name" class="name" autocomplete="off" required>
+                <label for="name">Name</label>
+              </div>
+
+              <div class="blockbox">
+
+                <input type="text" id="mail" class="mail" autocomplete="off" required>
+                <label for="mail">Mail</label>
+
+              </div>
+                <div class="blockbox">
+                  <textarea id="message" name="message" rows="11" autocomplete="off" required></textarea>
+                  <label for="message">Message</label>
+                </div>
+
+                <div class="blockbox">
+
+                  <div class="button">
+                    <input type="submit" value="Submit">
+                  </div>
+                  
+
+                </div>
+
+            </div>
+          </form>
+          <img class="contact" src="/TECKWILD/pexels-johnmark-smith-281962.jpg" alt="">
+        </div>
+    </div>
+    <!-- Connect the Javascript file -->
+    <script>
+
+let popup= document.getElementById("popup");
+const form= document.getElementById("form");
+
+form.onsubmit = (e) =>{
+  e.preventDefault();
+  popup.classList.add("open-popup");
+}
+      function closePopup(){
+        popup.classList.remove("open-popup");
+      }
+    </script>
+  </body>
+</html>
